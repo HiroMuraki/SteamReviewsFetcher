@@ -24,7 +24,7 @@
 | author        | 评测作者名             | 字符串                         |
 | posted_date   | 评测时间               | 格式为“xxxx年xx月xx日”的字符串 |
 | played_hours  | 游玩时间               | 浮点数                         |
-| helpful_count | 觉得次评测有价值的人数 | 整数                           |
+| helpful_count | 觉得此评测有价值的人数 | 整数                           |
 | is_recommend  | 是否推荐               | 整数（1=推荐，0=不推荐）       |
 | main_content  | 评测文本               | 字符串                         |
 
