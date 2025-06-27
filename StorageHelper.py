@@ -1,4 +1,4 @@
-from typing import List
+from typing import Iterable
 from GameReview import GameReview
 import csv
 import os
@@ -8,7 +8,7 @@ from ConsoleHelper import ConsoleHelper
 
 class StorageHelper:
     @staticmethod
-    def save_to_csv(game_reviews: List[GameReview], file_path: str) -> None:
+    def save_to_csv(game_reviews: Iterable[GameReview], file_path: str) -> None:
         with open(file_path, mode='w+', encoding='utf8', newline='\n') as fp:
             csv_writer = csv.writer(fp)
             csv_writer.writerow(GameReview.get_fields())  # noqa
@@ -17,7 +17,7 @@ class StorageHelper:
         ConsoleHelper.write_success(f"Saved to csv ({file_path})")
 
     @staticmethod
-    def save_to_sqlite(game_reviews: List[GameReview], file_path: str) -> None:
+    def save_to_sqlite(game_reviews: Iterable[GameReview], file_path: str) -> None:
         if os.path.exists(file_path):
             os.remove(file_path)
 
